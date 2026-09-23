@@ -1,0 +1,232 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+/* Header */
+
+header {
+    background-color: #222;
+    color: white;
+    padding: 25px 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 30px;
+}
+
+header p {
+    margin: 5px 0 0;
+    color: #ccc;
+}
+
+/* Cart Button */
+
+.cart-button {
+    background-color: #e67e22;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.cart-button:hover {
+    background-color: #d35400;
+}
+
+
+/* Menu */
+
+h2 {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 28px;
+}
+
+.food-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin: 30px auto 50px;
+    max-width: 1100px;
+}
+
+.food {
+    width: 230px;
+    min-height: 230px;
+    background-color: white;
+    padding: 25px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px #ddd;
+}
+
+.food h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.food p {
+    color: #666;
+}
+
+.food button {
+    background-color: #e67e22;
+    color: white;
+    border: none;
+    padding: 11px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.food button:hover {
+    background-color: #d35400;
+}
+
+
+/* Cart */
+
+#cart-box {
+    display: none;
+    position: fixed;
+    top: 80px;
+    right: 25px;
+    width: 350px;
+    background-color: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px #aaa;
+    z-index: 100;
+}
+
+#cart-box h2 {
+    margin: 0 0 20px;
+    text-align: left;
+    font-size: 22px;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.cart-item span:first-child {
+    width: 80px;
+    font-weight: bold;
+}
+
+.cart-item button {
+    width: 28px;
+    height: 28px;
+    padding: 0;
+    margin: 0 5px;
+    border: none;
+    border-radius: 50%;
+    background-color: #e67e22;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.cart-item button:hover {
+    background-color: #d35400;
+}
+
+#cart-total {
+    font-size: 20px;
+}
+
+#cart-box > button {
+    width: 100%;
+    padding: 11px;
+    margin-top: 15px;
+    background-color: #222;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+
+/* Reservation */
+
+.reservation {
+    width: 300px;
+    margin: 20px auto 50px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px #ddd;
+}
+
+.reservation input {
+    width: 90%;
+    padding: 10px;
+    margin: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.reservation button {
+    padding: 10px 20px;
+    background-color: #e67e22;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.reservation button:hover {
+    background-color: #d35400;
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    header {
+        padding: 20px;
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .food-container {
+        margin: 20px;
+    }
+
+    .food {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    #cart-box {
+        width: 90%;
+        right: 5%;
+    }
+
+    .reservation {
+        width: 90%;
+    }
+
+}
